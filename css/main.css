@@ -62,7 +62,8 @@ footer {
   text-align: center;
 }
 .float {
-  float:right;
+  float:left;
+  margin-right: 2em;
 }
 .small {
   font-size: smaller;
@@ -76,4 +77,8 @@ footer {
   width: 100px;
   border-radius:200%;
 }
+.bold{
+  border-color:dark red;
+}
+
   
