@@ -7,10 +7,9 @@ body {
 
 header {
   display: flex;
-  align-items: center;
+  align-items: center;/*makes it vertically centered*/
   background-image: url('download.jpg');
   z-index: 10;
-  position: relative;
 }
 
 header h1 {
@@ -18,6 +17,7 @@ header h1 {
   font-size: 400%;
   font-weight: bold;
   color: #5e9bc9;
+  text-align: center;
 }
 
 nav {
@@ -82,18 +82,6 @@ footer {
   text-align: center;
   box-shadow: 0px -2px #0a85d8;
 }
-
-.centre {
-  text-align: center;
-}
-
-/* Increase space between content and navigation */
-.content-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 120px; /* Increased padding-top to create more space between nav bar and content */
-}
-
 .circle-layout {
   position: relative;
   display: flex;
@@ -104,4 +92,53 @@ footer {
 
 .logo{
   border-radius:100%;
+}
+
+.row {
+  display: flex;/*makes them sit side by side instead of stacking on top of eachother*/
+  width: 100%;
+}
+.column1 {
+  width: 25%;
+  padding: 15px;
+  border-style: solid;
+}
+.column2 {
+  width: 75%;
+  padding: 15px;
+  border-style: solid;
+  justify-content: center;
+  
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* two columns with the same length */
+  gap: 20px; /* add some space between the grid items */
+  }
+
+.grid-item {
+border: 1px solid #ccc;
+padding: 20px;
+text-align: center;
+font-weight: bold;
+}
+
+.grid-item img {
+    height:70%;
+  
+}
+/* Media query for screens smaller than 800 pixels */
+@media (max-width: 800px) {
+.grid-container {
+   grid-template-columns: 1fr 1fr; /* two columns with the same length */
+}
+/* Media query for screens smaller than 600 pixels */ 
+@media (max-width: 600px) {
+.grid-container {
+ grid-template-columns: 1fr; /* Change to a single column */
+}
+
+main {
+  margin: 5%;
 }
